@@ -4,15 +4,20 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 // our controller start here ---------------------
-use App\Http\Controllers\exampleController;
+ use App\Http\Controllers\website\websiteController;
 
+// index page route 
+Route::get('/',[websiteController::class , 'index']);
+// about  page route 
+Route::get('/about',[websiteController::class , 'about']);
 
+// service  page route 
+Route::get('/service',[websiteController::class , 'service']);
+// blog  page route 
+Route::get('/blog',[websiteController::class , 'blog']);
 
-Route::get('/',[exampleController::class,'myindex']);
-
-Route::get('product',[exampleController::class,'myproduct']);
-
-
+// contact   page route 
+Route::get('/contact',[websiteController::class , 'contact']);
 
 
 
