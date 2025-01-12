@@ -11,13 +11,7 @@
             </div>
           </div>
     {{-- include services --}}
-    @includeif('frontend.mycomponent.header.services', ['title' => 'Our Service'])
+    @includeif('frontend.mycomponent.header.services')
       
-
-
-
-
-
-
     </main>
 @endsection

@@ -6,8 +6,6 @@
 @include('frontend.mycomponent.header.breadcrub')
 
 
-{{-- include slider --}}
-@include('frontend.mycomponent.header.slider')
 
 
 {{-- include services --}}
@@ -17,12 +15,6 @@
 
 {{-- include services --}}
 @include('frontend.mycomponent.header.faq')
-
-
-
-
-
-
 
   
 </main>

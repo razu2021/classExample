@@ -21,7 +21,6 @@ class websiteController extends Controller
     //service  page 
     public function service(){
         return view('frontend.pages.service');
-
     }
     //blog  page 
     public function blog(){

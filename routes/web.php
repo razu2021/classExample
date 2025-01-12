@@ -1,10 +1,13 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\backend\usermange\userManageController;
+ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 // our controller start here ---------------------
  use App\Http\Controllers\website\websiteController;
+//dashboard controller 
+ use App\Http\Controllers\backend\dashboardController;
 
 // index page route 
 Route::get('/',[websiteController::class , 'index']);
@@ -74,9 +77,19 @@ Route::get('/contact',[websiteController::class , 'contact']);
 //     return view('welcome');
 // });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
+
+
+// admin dashboard route 
+Route::get('admin-dashboard',[dashboardController::class,'index'])->middleware(['auth', 'verified'])->name('dashboard');
+// user mangae 
+Route::get('manage-user',[userManageController::class,'index']);
+
+
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

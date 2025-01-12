@@ -4,7 +4,7 @@
 {{-- service sectin start here  --}}
         <section class="pt-5 pb-5">
             <div class="container">
-                <h1 class="text-success fw-bolder text-capitalize">{{$title}}</h1>
+                <h1 class="text-success fw-bolder text-capitalize">service</h1>
               <div class="row">
                 <div class="col-lg-3">.
                   <div class="services">
