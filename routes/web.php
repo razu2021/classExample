@@ -9,73 +9,26 @@ use Illuminate\Support\Facades\Route;
 //dashboard controller 
  use App\Http\Controllers\backend\dashboardController;
 
-// index page route 
-Route::get('/',[websiteController::class , 'index']);
-// about  page route 
-Route::get('/about',[websiteController::class , 'about']);
 
-// service  page route 
-Route::get('/service',[websiteController::class , 'service']);
-// blog  page route 
-Route::get('/blog',[websiteController::class , 'blog']);
+ /**====  website route strat here ======== */
 
-// contact   page route 
-Route::get('/contact',[websiteController::class , 'contact']);
+ Route::get('/',[websiteController::class,'index'])->name('index');
+ Route::get('/about',[websiteController::class,'about'])->name('about');
 
 
 
 
-
-// Route::get('normal-page',function(){
-//     return "this is normal page";
-// });
-
-
-// index page 
-// Route::get('index',function(){
-//     return view('index');
-// });
-
-// about  paage 
-// Route::get('about/about-our-organization',function(){
-//     return view('about_page');
-// });
-
-// data paass with route 
-// Route::get('contact/{name}',function($name){
-//     return view('contact',['myname'=>$name]);
-// });
-
-
-// route redirect   user lending here or there 
-// Route::redirect('service','about/about-our-organization');
-
-
-
-
-// route for nested view 
-// Route::get('page-about',function(){
-//     return view('pages.about');
-// });
-// Route::get('page-service',function(){
-//     return view('pages.service');
-// });
-// Route::get('page-contact',function(){
-//     return view('pages.contact');
-// });
-
-
-
-// route 
+ /**====  website route end  here ======== */
 
 
 
 
 
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+
+
+
+
 
 
 
@@ -97,4 +50,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+
+
 require __DIR__.'/auth.php';
+// backend route file 
+require __DIR__.'/backend.php';

@@ -7,32 +7,15 @@ use Illuminate\Http\Request;
 
 class websiteController extends Controller
 {
-    //index page 
+
+    /**==== index page function ==== */
     public function index(){
         return view('frontend.index');
-
     }
-
-    //about page 
+    /**==== about page function ==== */
     public function about(){
         return view('frontend.pages.about');
-
     }
-    //service  page 
-    public function service(){
-        return view('frontend.pages.service');
-    }
-    //blog  page 
-    public function blog(){
-        return view('frontend.pages.blog');
-
-    }
-    //contact   page 
-    public function contact(){
-        return view('frontend.pages.contact');
-
-    }
-
 
 
 }
