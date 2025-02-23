@@ -1,0 +1,37 @@
+<?php
+
+namespace App\Http\Controllers\backend\home\banner;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class BannerController extends Controller
+{
+    /** ---- index page -- */
+    public function index(){
+        return view('backend.home.banner.index');
+    }
+
+    /** ---- add page -- */
+    public function add(){
+        return view('backend.home.banner.add');
+    }
+    /** ---- view page -- */
+    public function view(){
+        return view('backend.home.banner.view');
+    }
+    /** ---- edit page -- */
+     public function edit(){
+        return view('backend.home.banner.edit');
+    }
+
+
+
+
+
+
+
+
+
+
+}

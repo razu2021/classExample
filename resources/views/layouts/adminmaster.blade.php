@@ -1,38 +1,55 @@
 <!DOCTYPE html>
-
-
 <html
-  lang="{{ str_replace('_', '-', app()->getLocale()) }}"
+  lang="en"
   class="light-style layout-menu-fixed"
   dir="ltr"
   data-theme="theme-default"
-  data-assets-path="{{asset('contents/admin/assets')}}/"
-  data-template="vertical-menu-template-free">
+  data-assets-path="{{asset('contents/backend')}}/assets/"
+  data-template="vertical-menu-template-free"
+>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport"content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+
     <title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+
     <meta name="description" content="" />
-    <link rel="icon" type="image/x-icon" href="{{asset('contents/admin/assets')}}/img/favicon/favicon.ico" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{asset('contents/backend')}}/assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Icons. Uncomment required icon fonts -->
-    <link rel="stylesheet" href="{{asset('contents/admin/assets')}}/vendor/fonts/boxicons.css" />
+    <link rel="stylesheet" href="{{asset('contents/backend')}}/assets/vendor/fonts/boxicons.css" />
+
     <!-- Core CSS -->
-    <link rel="stylesheet" href="{{asset('contents/admin/assets')}}/vendor/css/core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="{{asset('contents/admin/assets')}}/vendor/css/theme-default.css" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="{{asset('contents/admin/assets')}}/css/demo.css" />
+    <link rel="stylesheet" href="{{asset('contents/backend')}}/assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="{{asset('contents/backend')}}/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="{{asset('contents/backend')}}/assets/css/demo.css" />
+
     <!-- Vendors CSS -->
-    <link rel="stylesheet" href="{{asset('contents/admin/assets')}}/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-    <link rel="stylesheet" href="{{asset('contents/admin/assets')}}/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href="{{asset('contents/backend')}}/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+    <link rel="stylesheet" href="{{asset('contents/backend')}}/assets/vendor/libs/apex-charts/apex-charts.css" />
+
     <!-- Page CSS -->
+
     <!-- Helpers -->
-    <script src="{{asset('contents/admin/assets')}}/vendor/js/helpers.js"></script>
+    <script src="{{asset('contents/backend')}}/assets/vendor/js/helpers.js"></script>
+
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="{{asset('contents/admin/assets')}}/js/config.js"></script>
+    <script src="{{asset('contents/backend')}}/assets/js/config.js"></script>
   </head>
 
   <body>
@@ -112,7 +129,7 @@
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
             <li class="menu-item active">
-              <a href="{{url('admin-dashboard')}}" class="menu-link">
+              <a href="index.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
@@ -157,7 +174,6 @@
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">Pages</span>
             </li>
-
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-dock-top"></i>
@@ -181,38 +197,6 @@
                 </li>
               </ul>
             </li>
-            {{-- manage user  --}}
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                <div data-i18n="Account Settings">User Management</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="{{url('manage-user')}}" class="menu-link">
-                    <div data-i18n="Account">All User </div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            {{-- manage user  --}}
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                <div data-i18n="Account Settings">Banner </div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="{{route('banner.index')}}" class="menu-link">
-                    <div data-i18n="Account">All Banner </div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-
-
-
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
@@ -256,23 +240,17 @@
             </li>
             <!-- Components -->
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Components</span></li>
-            <!-- Cards -->
-            <li class="menu-item">
-              <a href="cards-basic.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Cards</div>
-              </a>
-            </li>
+          
             <!-- User interface -->
             <li class="menu-item">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-box"></i>
-                <div data-i18n="User interface">User interface</div>
+                <div data-i18n="User interface">Home Page</div>
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="ui-accordion.html" class="menu-link">
-                    <div data-i18n="Accordion">Accordion</div>
+                  <a href="{{route('home.all')}}" class="menu-link">
+                    <div data-i18n="Accordion">Home Banner</div>
                   </a>
                 </li>
                 <li class="menu-item">
@@ -489,8 +467,8 @@
                   <input
                     type="text"
                     class="form-control border-0 shadow-none"
-                    placeholder="Search..."
-                    aria-label="Search..."
+                    placeholder="Search{{asset('contents/backend')}}."
+                    aria-label="Search{{asset('contents/backend')}}."
                   />
                 </div>
               </div>
@@ -514,7 +492,7 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="{{asset('contents/admin/assets')}}/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                      <img src="{{asset('contents/backend')}}/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -523,11 +501,11 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                              <img src="{{asset('contents/admin/assets')}}/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                              <img src="{{asset('contents/backend')}}/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">{{ Auth::user()->name }}</span>
+                            <span class="fw-semibold d-block">John Doe</span>
                             <small class="text-muted">Admin</small>
                           </div>
                         </div>
@@ -561,14 +539,15 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                {{ __('Log Out') }}
-                            </x-dropdown-link>
-                        </form>
+                    <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                      <a class="dropdown-item" :href="route('logout')" onclick="event.preventDefault();
+                                            this.closest('form').submit();">
+                        <i class="bx bx-power-off me-2"></i>
+                        <span class="align-middle">Log Out</span>
+                      </a>
+                    </form>
+
                     </li>
                   </ul>
                 </li>
@@ -581,16 +560,12 @@
 
 
 
-{{-- main content load here  --}}
-
-@yield('admin_content')
-{{-- main content load end here  --}}
 
 
 
+    {{--   backend content load here   --}}
 
-
-
+    @yield('admin_contents')
 
 
 
@@ -636,7 +611,7 @@
           <!-- / Layout page -->
         </div>
   
-        <!-- Overlay 
+        <!-- Overlay -->
         <div class="layout-overlay layout-menu-toggle"></div>
       </div>
       <!-- / Layout wrapper -->
@@ -652,26 +627,33 @@
   
       <!-- Core JS -->
       <!-- build:js assets/vendor/js/core.js -->
-      <script src="{{asset('contents/admin/assets')}}/vendor/libs/jquery/jquery.js"></script>
-      <script src="{{asset('contents/admin/assets')}}/vendor/libs/popper/popper.js"></script>
-      <script src="{{asset('contents/admin/assets')}}/vendor/js/bootstrap.js"></script>
-      <script src="{{asset('contents/admin/assets')}}/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+      <script src="{{asset('contents/backend')}}/assets/vendor/libs/jquery/jquery.js"></script>
+      <script src="{{asset('contents/backend')}}/assets/vendor/libs/popper/popper.js"></script>
+      <script src="{{asset('contents/backend')}}/assets/vendor/js/bootstrap.js"></script>
+      <script src="{{asset('contents/backend')}}/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
   
-      <script src="{{asset('contents/admin/assets')}}/vendor/js/menu.js"></script>
+      <script src="{{asset('contents/backend')}}/assets/vendor/js/menu.js"></script>
       <!-- endbuild -->
   
       <!-- Vendors JS -->
-      <script src="{{asset('contents/admin/assets')}}/vendor/libs/apex-charts/apexcharts.js"></script>
+      <script src="{{asset('contents/backend')}}/assets/vendor/libs/apex-charts/apexcharts.js"></script>
   
       <!-- Main JS -->
-      <script src="{{asset('contents/admin/assets')}}/js/main.js"></script>
+      <script src="{{asset('contents/backend')}}/assets/js/main.js"></script>
   
       <!-- Page JS -->
-      <script src="{{asset('contents/admin/assets')}}/js/dashboards-analytics.js"></script>
+      <script src="{{asset('contents/backend')}}/assets/js/dashboards-analytics.js"></script>
   
       <!-- Place this tag in your head or just before your close body tag. -->
       <script async defer src="https://buttons.github.io/buttons.js"></script>
     </body>
   </html>
   
+
+
+
+
+
+
+
 

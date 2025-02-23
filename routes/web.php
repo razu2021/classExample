@@ -1,13 +1,9 @@
 <?php
-
-use App\Http\Controllers\backend\usermange\userManageController;
- use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
 // our controller start here ---------------------
  use App\Http\Controllers\website\websiteController;
-//dashboard controller 
- use App\Http\Controllers\backend\dashboardController;
+
 
 
  /**====  website route strat here ======== */
@@ -33,10 +29,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-// admin dashboard route 
-Route::get('admin-dashboard',[dashboardController::class,'index'])->middleware(['auth', 'verified'])->name('dashboard');
-// user mangae 
-Route::get('manage-user',[userManageController::class,'index']);
+
 
 
 

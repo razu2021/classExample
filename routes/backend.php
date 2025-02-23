@@ -1,17 +1,18 @@
 <?php
+use App\Http\Controllers\backend\home\banner\BannerController;
 use Illuminate\Support\Facades\Route;
-//================== my custom controller user start here 
-use App\Http\Controllers\backend\banner\bannerController;
+use App\Http\Controllers\backend\DashboardController;
+
+Route::get('admin/dashboard',[DashboardController::class,'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 
 
-Route::middleware('auth')->prefix('banner')->name('banner.')->group(function(){
-    Route::get('/all', [bannerController::class,'index'])->name('index');
-    Route::get('/add', [bannerController::class,'add'])->name('add');
-    Route::get('/view', [bannerController::class,'view'])->name('view');
-    Route::get('/edit', [bannerController::class,'edit'])->name('edit');
-    Route::post('/submit', [bannerController::class,'submit'])->name('submit');
-});
+/**-------  home banner route start here ---- */
 
 
 
+
+Route::get('home-banner/all',[BannerController::class ,'index'])->name('home.all');
+Route::get('home-banner/add',[BannerController::class ,'add'])->name('home.add');
+Route::get('home-banner/view',[BannerController::class ,'view'])->name('home.view');
+Route::get('home-banner/edit',[BannerController::class ,'edit'])->name('home.edit');

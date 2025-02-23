@@ -107,3 +107,18 @@
 ```
 
 
+
+
+# class No : 20/14 
+## Home banner page design 
+    - crate view folder inside of backend/home/banner 
+        - index
+        - add
+        - view
+        - edit  
+        note: with mastaring 
+    - crate controller inside of backend/home/banner/BannerController 
+        - create all method for your specific pages 
+    
+    - Create route for specific pages 
+    Note ::  visit all page its working or not 
