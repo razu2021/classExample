@@ -12,6 +12,10 @@ Route::get('admin/dashboard',[DashboardController::class,'index'])->middleware([
 
 
 
+
+
+
+
 Route::get('home-banner/all',[BannerController::class ,'index'])->name('home.all');
 Route::get('home-banner/add',[BannerController::class ,'add'])->name('home.add');
 Route::get('home-banner/view',[BannerController::class ,'view'])->name('home.view');
